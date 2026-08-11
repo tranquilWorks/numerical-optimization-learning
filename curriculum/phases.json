@@ -1,0 +1,46 @@
+{
+  "phases": [
+    {
+      "phase": 1,
+      "title": "Numerical foundations",
+      "module_start": 1,
+      "module_end": 4,
+      "learning_goal": "Build visible, manipulable intuition for numerical foundations."
+    },
+    {
+      "phase": 2,
+      "title": "Approximation and calculus",
+      "module_start": 5,
+      "module_end": 8,
+      "learning_goal": "Build visible, manipulable intuition for approximation and calculus."
+    },
+    {
+      "phase": 3,
+      "title": "Linear algebra",
+      "module_start": 9,
+      "module_end": 12,
+      "learning_goal": "Build visible, manipulable intuition for linear algebra."
+    },
+    {
+      "phase": 4,
+      "title": "Optimization",
+      "module_start": 13,
+      "module_end": 16,
+      "learning_goal": "Build visible, manipulable intuition for optimization."
+    },
+    {
+      "phase": 5,
+      "title": "Identification and uncertainty",
+      "module_start": 17,
+      "module_end": 20,
+      "learning_goal": "Build visible, manipulable intuition for identification and uncertainty."
+    },
+    {
+      "phase": 6,
+      "title": "Engineering optimization",
+      "module_start": 21,
+      "module_end": 24,
+      "learning_goal": "Build visible, manipulable intuition for engineering optimization."
+    }
+  ]
+}

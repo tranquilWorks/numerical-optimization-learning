@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "product": "numerical-optimization-learning",
+  "title": "Numerical Methods and Optimization",
+  "purpose": "Learn how numerical representation, solvers, optimization, and sensitivity shape trustworthy engineering computation.",
+  "module_count": 24,
+  "progression_rule": "Complete modules in order until the first six are complete; later modules may be selected when their prerequisites are met.",
+  "interaction_contract": {
+    "environment": "MATLAB",
+    "notebook_format": "MATLAB scripts with %% Live Editor cells",
+    "lever_ui": "uifigure controls",
+    "required_sweeps": 2,
+    "required_broken_cases": 1,
+    "randomness": "seeded",
+    "base_matlab_preferred": true,
+    "learning_cycle": [
+      "read",
+      "visualize-baseline",
+      "move-one-lever",
+      "visualize-delta",
+      "read-and-explain"
+    ]
+  },
+  "modules": [
+    {
+      "number": 1,
+      "id": "P01",
+      "title": "Watch Gradient Descent Converge or Diverge",
+      "guiding_question": "Why does gradient descent converge quickly, slowly, or not at all?",
+      "phase": 1,
+      "phase_title": "Numerical foundations",
+      "slug": "watch-gradient-descent-converge-or-diverge",
+      "folder": "modules/01-watch-gradient-descent-converge-or-diverge",
+      "status": "implemented",
+      "implementation_batch": "P01",
+      "prerequisites": [],
+      "evidence_level": "simulated"
+    },
+    {
+      "number": 2,
+      "id": "P02",
+      "title": "Expose Floating-Point Roundoff",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you expose Floating-Point Roundoff?",
+      "phase": 1,
+      "phase_title": "Numerical foundations",
+      "slug": "expose-floating-point-roundoff",
+      "folder": "modules/02-expose-floating-point-roundoff",
+      "status": "scaffolded",
+      "implementation_batch": "P02",
+      "prerequisites": [
+        "P01"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 3,
+      "id": "P03",
+      "title": "See Conditioning Amplify Error",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you see Conditioning Amplify Error?",
+      "phase": 1,
+      "phase_title": "Numerical foundations",
+      "slug": "see-conditioning-amplify-error",
+      "folder": "modules/03-see-conditioning-amplify-error",
+      "status": "scaffolded",
+      "implementation_batch": "P03",
+      "prerequisites": [
+        "P02"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 4,
+      "id": "P04",
+      "title": "Find Roots with Bracketing and Newton Steps",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you find Roots with Bracketing and Newton Steps?",
+      "phase": 1,
+      "phase_title": "Numerical foundations",
+      "slug": "find-roots-with-bracketing-and-newton-steps",
+      "folder": "modules/04-find-roots-with-bracketing-and-newton-steps",
+      "status": "scaffolded",
+      "implementation_batch": "P04",
+      "prerequisites": [
+        "P03"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 5,
+      "id": "P05",
+      "title": "Interpolate Sparse Data",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you interpolate Sparse Data?",
+      "phase": 2,
+      "phase_title": "Approximation and calculus",
+      "slug": "interpolate-sparse-data",
+      "folder": "modules/05-interpolate-sparse-data",
+      "status": "scaffolded",
+      "implementation_batch": "P05",
+      "prerequisites": [
+        "P04"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 6,
+      "id": "P06",
+      "title": "Differentiate Noisy Measurements",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you differentiate Noisy Measurements?",
+      "phase": 2,
+      "phase_title": "Approximation and calculus",
+      "slug": "differentiate-noisy-measurements",
+      "folder": "modules/06-differentiate-noisy-measurements",
+      "status": "scaffolded",
+      "implementation_batch": "P06",
+      "prerequisites": [
+        "P05"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 7,
+      "id": "P07",
+      "title": "Integrate a Function Numerically",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you integrate a Function Numerically?",
+      "phase": 2,
+      "phase_title": "Approximation and calculus",
+      "slug": "integrate-a-function-numerically",
+      "folder": "modules/07-integrate-a-function-numerically",
+      "status": "scaffolded",
+      "implementation_batch": "P07",
+      "prerequisites": [
+        "P06"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 8,
+      "id": "P08",
+      "title": "Integrate an ODE with Competing Solvers",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you integrate an ODE with Competing Solvers?",
+      "phase": 2,
+      "phase_title": "Approximation and calculus",
+      "slug": "integrate-an-ode-with-competing-solvers",
+      "folder": "modules/08-integrate-an-ode-with-competing-solvers",
+      "status": "scaffolded",
+      "implementation_batch": "P08",
+      "prerequisites": [
+        "P07"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 9,
+      "id": "P09",
+      "title": "Solve a Linear System",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you solve a Linear System?",
+      "phase": 3,
+      "phase_title": "Linear algebra",
+      "slug": "solve-a-linear-system",
+      "folder": "modules/09-solve-a-linear-system",
+      "status": "scaffolded",
+      "implementation_batch": "P09",
+      "prerequisites": [
+        "P08"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 10,
+      "id": "P10",
+      "title": "Fit Data with Least Squares",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you fit Data with Least Squares?",
+      "phase": 3,
+      "phase_title": "Linear algebra",
+      "slug": "fit-data-with-least-squares",
+      "folder": "modules/10-fit-data-with-least-squares",
+      "status": "scaffolded",
+      "implementation_batch": "P10",
+      "prerequisites": [
+        "P09"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 11,
+      "id": "P11",
+      "title": "Interpret Eigenvalues and Modes",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you interpret Eigenvalues and Modes?",
+      "phase": 3,
+      "phase_title": "Linear algebra",
+      "slug": "interpret-eigenvalues-and-modes",
+      "folder": "modules/11-interpret-eigenvalues-and-modes",
+      "status": "scaffolded",
+      "implementation_batch": "P11",
+      "prerequisites": [
+        "P10"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 12,
+      "id": "P12",
+      "title": "Compress a Matrix with the SVD",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you compress a Matrix with the SVD?",
+      "phase": 3,
+      "phase_title": "Linear algebra",
+      "slug": "compress-a-matrix-with-the-svd",
+      "folder": "modules/12-compress-a-matrix-with-the-svd",
+      "status": "scaffolded",
+      "implementation_batch": "P12",
+      "prerequisites": [
+        "P11"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 13,
+      "id": "P13",
+      "title": "Tune Gradient Descent",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you tune Gradient Descent?",
+      "phase": 4,
+      "phase_title": "Optimization",
+      "slug": "tune-gradient-descent",
+      "folder": "modules/13-tune-gradient-descent",
+      "status": "scaffolded",
+      "implementation_batch": "P13",
+      "prerequisites": [
+        "P12"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 14,
+      "id": "P14",
+      "title": "Use Newton and Quasi-Newton Curvature",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you use Newton and Quasi-Newton Curvature?",
+      "phase": 4,
+      "phase_title": "Optimization",
+      "slug": "use-newton-and-quasi-newton-curvature",
+      "folder": "modules/14-use-newton-and-quasi-newton-curvature",
+      "status": "scaffolded",
+      "implementation_batch": "P14",
+      "prerequisites": [
+        "P13"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 15,
+      "id": "P15",
+      "title": "Enforce Constraints",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you enforce Constraints?",
+      "phase": 4,
+      "phase_title": "Optimization",
+      "slug": "enforce-constraints",
+      "folder": "modules/15-enforce-constraints",
+      "status": "scaffolded",
+      "implementation_batch": "P15",
+      "prerequisites": [
+        "P14"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 16,
+      "id": "P16",
+      "title": "Recognize Convex and Nonconvex Landscapes",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you recognize Convex and Nonconvex Landscapes?",
+      "phase": 4,
+      "phase_title": "Optimization",
+      "slug": "recognize-convex-and-nonconvex-landscapes",
+      "folder": "modules/16-recognize-convex-and-nonconvex-landscapes",
+      "status": "scaffolded",
+      "implementation_batch": "P16",
+      "prerequisites": [
+        "P15"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 17,
+      "id": "P17",
+      "title": "Estimate Model Parameters",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you estimate Model Parameters?",
+      "phase": 5,
+      "phase_title": "Identification and uncertainty",
+      "slug": "estimate-model-parameters",
+      "folder": "modules/17-estimate-model-parameters",
+      "status": "scaffolded",
+      "implementation_batch": "P17",
+      "prerequisites": [
+        "P16"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 18,
+      "id": "P18",
+      "title": "Regularize an Ill-Posed Fit",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you regularize an Ill-Posed Fit?",
+      "phase": 5,
+      "phase_title": "Identification and uncertainty",
+      "slug": "regularize-an-ill-posed-fit",
+      "folder": "modules/18-regularize-an-ill-posed-fit",
+      "status": "scaffolded",
+      "implementation_batch": "P18",
+      "prerequisites": [
+        "P17"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 19,
+      "id": "P19",
+      "title": "Compute Sensitivity to Inputs",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you compute Sensitivity to Inputs?",
+      "phase": 5,
+      "phase_title": "Identification and uncertainty",
+      "slug": "compute-sensitivity-to-inputs",
+      "folder": "modules/19-compute-sensitivity-to-inputs",
+      "status": "scaffolded",
+      "implementation_batch": "P19",
+      "prerequisites": [
+        "P18"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 20,
+      "id": "P20",
+      "title": "Propagate Uncertainty by Monte Carlo",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you propagate Uncertainty by Monte Carlo?",
+      "phase": 5,
+      "phase_title": "Identification and uncertainty",
+      "slug": "propagate-uncertainty-by-monte-carlo",
+      "folder": "modules/20-propagate-uncertainty-by-monte-carlo",
+      "status": "scaffolded",
+      "implementation_batch": "P20",
+      "prerequisites": [
+        "P19"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 21,
+      "id": "P21",
+      "title": "Optimize a Trajectory",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you optimize a Trajectory?",
+      "phase": 6,
+      "phase_title": "Engineering optimization",
+      "slug": "optimize-a-trajectory",
+      "folder": "modules/21-optimize-a-trajectory",
+      "status": "scaffolded",
+      "implementation_batch": "P21",
+      "prerequisites": [
+        "P20"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 22,
+      "id": "P22",
+      "title": "Balance Multiple Objectives",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you balance Multiple Objectives?",
+      "phase": 6,
+      "phase_title": "Engineering optimization",
+      "slug": "balance-multiple-objectives",
+      "folder": "modules/22-balance-multiple-objectives",
+      "status": "scaffolded",
+      "implementation_batch": "P22",
+      "prerequisites": [
+        "P21"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 23,
+      "id": "P23",
+      "title": "Solve a Dynamic Program",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you solve a Dynamic Program?",
+      "phase": 6,
+      "phase_title": "Engineering optimization",
+      "slug": "solve-a-dynamic-program",
+      "folder": "modules/23-solve-a-dynamic-program",
+      "status": "scaffolded",
+      "implementation_batch": "P23",
+      "prerequisites": [
+        "P22"
+      ],
+      "evidence_level": "none"
+    },
+    {
+      "number": 24,
+      "id": "P24",
+      "title": "Verify a Solver Against Independent Checks",
+      "guiding_question": "What inputs, observable effects, and failure modes matter when you verify a Solver Against Independent Checks?",
+      "phase": 6,
+      "phase_title": "Engineering optimization",
+      "slug": "verify-a-solver-against-independent-checks",
+      "folder": "modules/24-verify-a-solver-against-independent-checks",
+      "status": "scaffolded",
+      "implementation_batch": "P24",
+      "prerequisites": [
+        "P23"
+      ],
+      "evidence_level": "none"
+    }
+  ]
+}
