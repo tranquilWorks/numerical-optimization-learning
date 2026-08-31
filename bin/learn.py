@@ -59,10 +59,13 @@ def print_start(module):
 def cmd_start(args):
     manifest = load_manifest()
     module = resolve_module(manifest, args.module)
+    result = print_start(module)
+    if result != 0:
+        return result
     state = load_state()
     state["current"] = module["id"]
     save_state(state)
-    return print_start(module)
+    return result
 
 def cmd_continue(_args):
     manifest = load_manifest()
