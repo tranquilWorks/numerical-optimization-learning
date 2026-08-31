@@ -7,7 +7,7 @@ reviewable implementation batch. `implemented` means the complete learner slice 
 | Batch | Phase | Module | Guiding question | Status |
 | --- | --- | --- | --- | --- |
 | P01 | 1: Numerical foundations | [Watch Gradient Descent Converge or Diverge](../modules/01-watch-gradient-descent-converge-or-diverge/README.md) | Why does gradient descent converge quickly, slowly, or not at all? | implemented |
-| P02 | 1: Numerical foundations | [Expose Floating-Point Roundoff](../modules/02-expose-floating-point-roundoff/README.md) | What inputs, observable effects, and failure modes matter when you expose Floating-Point Roundoff? | scaffolded |
+| P02 | 1: Numerical foundations | [Expose Floating-Point Roundoff](../modules/02-expose-floating-point-roundoff/README.md) | What inputs, observable effects, and failure modes matter when you expose Floating-Point Roundoff? | implemented |
 | P03 | 1: Numerical foundations | [See Conditioning Amplify Error](../modules/03-see-conditioning-amplify-error/README.md) | What inputs, observable effects, and failure modes matter when you see Conditioning Amplify Error? | scaffolded |
 | P04 | 1: Numerical foundations | [Find Roots with Bracketing and Newton Steps](../modules/04-find-roots-with-bracketing-and-newton-steps/README.md) | What inputs, observable effects, and failure modes matter when you find Roots with Bracketing and Newton Steps? | scaffolded |
 | P05 | 2: Approximation and calculus | [Interpolate Sparse Data](../modules/05-interpolate-sparse-data/README.md) | What inputs, observable effects, and failure modes matter when you interpolate Sparse Data? | scaffolded |
