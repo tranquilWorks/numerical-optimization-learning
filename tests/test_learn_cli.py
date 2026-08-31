@@ -81,6 +81,55 @@ class LearnCliTests(unittest.TestCase):
         self.assertEqual(checked.returncode, 0, checked.stderr)
         self.assertIn("run_module_checks('P02')", checked.stdout)
 
+    def test_p03_starts_and_exposes_checks_permanently(self):
+        started = self.run_cli("start", "P03")
+        self.assertEqual(started.returncode, 0, started.stderr)
+        self.assertIn("P03 — See Conditioning Amplify Error", started.stdout)
+        self.assertIn(
+            "Guiding question: What inputs, observable effects, and failure modes matter when you see Conditioning Amplify Error?",
+            started.stdout,
+        )
+        checked = self.run_cli("check", "P03")
+        self.assertEqual(checked.returncode, 0, checked.stderr)
+        self.assertIn("run_module_checks('P03')", checked.stdout)
+
+    def test_p03_completion_retains_teach_back_and_resumes(self):
+        # Executable checks and teach-back judgment remain external manual gates.
+        teach_back = (
+            "Nearly parallel sensor rows weakly measure the source difference, so reconstruction "
+            "amplifies error in that direction. A small input error or perturbed-data residual can "
+            "therefore coexist with a large source error."
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = self.build_fixture(temporary)
+            checked = self.run_in_fixture(fixture, "check", "P03")
+            self.assertEqual(checked.returncode, 0, checked.stderr)
+            self.assertIn("run_module_checks('P03')", checked.stdout)
+
+            completed = self.run_in_fixture(
+                fixture,
+                "complete",
+                "P03",
+                "--note",
+                teach_back,
+            )
+            self.assertEqual(completed.returncode, 0, completed.stderr)
+            self.assertIn("Marked P03 complete.", completed.stdout)
+
+            state_path = fixture / ".learning/progress.json"
+            completed_state = json.loads(state_path.read_text(encoding="utf-8"))
+            self.assertEqual(completed_state["current"], "P03")
+            self.assertEqual(completed_state["completed"], {"P03": True})
+            self.assertEqual(completed_state["notes"], {"P03": teach_back})
+
+            continued = self.run_in_fixture(fixture, "continue")
+            self.assertEqual(continued.returncode, 0, continued.stderr)
+            self.assertIn("P03 — See Conditioning Amplify Error", continued.stdout)
+            status = self.run_in_fixture(fixture, "status")
+            self.assertEqual(status.returncode, 0, status.stderr)
+            self.assertIn("1 completed", status.stdout)
+            self.assertIn("Current: P03", status.stdout)
+
     def test_p02_completion_record_persists_and_scaffold_refusal_is_non_mutating(self):
         # Checks and teach-back judgment are manual gates; the CLI only records their result.
         teach_back = (
