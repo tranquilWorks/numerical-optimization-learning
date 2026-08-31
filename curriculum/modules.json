@@ -61,12 +61,12 @@
       "phase_title": "Numerical foundations",
       "slug": "see-conditioning-amplify-error",
       "folder": "modules/03-see-conditioning-amplify-error",
-      "status": "scaffolded",
+      "status": "implemented",
       "implementation_batch": "P03",
       "prerequisites": [
         "P02"
       ],
-      "evidence_level": "none"
+      "evidence_level": "simulated"
     },
     {
       "number": 4,
